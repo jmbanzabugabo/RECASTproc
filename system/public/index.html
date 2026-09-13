@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>CASTmir — AI Performance and Security Monitor</title><link rel="stylesheet" href="styles.css" /></head>
+<body>
+<div class="topbar"><div class="mark"></div><b>CASTmir</b>
+  <span class="spacer"></span>
+  <a href="/download/castmir-extension.zip">Install extension</a>
+  <a href="dashboard.html">My dashboard</a>
+  <a href="admin.html">Admin dashboard</a>
+</div>
+<div class="wrap" style="display:flex;flex-direction:column;gap:26px">
+  <section>
+    <div class="eyebrow">AI performance and security monitor</div>
+    <h1>Grammarly for AI interactions —<br /><span style="color:var(--garnet)">performance and security, together.</span></h1>
+    <p style="max-width:620px;font-size:15px;line-height:1.6;color:#4c535c">A browser extension that sits inline as you use ChatGPT, Claude, Gemini, Copilot and Perplexity — scoring prompt quality, detecting drift, and flagging security risk in real time. It captures your prompt at the moment you send it, never silently: you approve each site first.</p>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:16px">
+      <a href="/download/castmir-extension.zip"><button class="primary">↓ Download castmir-extension.zip</button></a>
+      <a href="dashboard.html"><button>Already installed? View my dashboard</button></a>
+    </div>
+  </section>
+
+  <section class="card">
+    <div class="eyebrow">Get started</div>
+    <h2 style="font-size:20px;margin-top:8px">Install CASTmir</h2>
+    <p class="muted">Not in the Chrome Web Store yet — during the pilot it installs directly from this file. Works in Chrome, Edge, Brave and other Chromium browsers. Takes about two minutes.</p>
+    <ol class="steps" style="margin-top:14px">
+      <li><span><b>Unzip the file.</b> Right-click the downloaded zip → Extract All (Windows) or double-click it (Mac). Keep the resulting <code>castmir-extension</code> folder where it is.</span></li>
+      <li><span><b>Open your browser's extensions page.</b> Chrome: <code>chrome://extensions</code> · Edge: <code>edge://extensions</code> · Brave: <code>brave://extensions</code></span></li>
+      <li><span><b>Turn on Developer mode.</b> Toggle it on — usually top-right of the page. Three new buttons appear.</span></li>
+      <li><span><b>Click "Load unpacked".</b> Select the <code>castmir-extension</code> folder (the folder itself, not a file inside it).</span></li>
+      <li><span><b>Pin it to your toolbar.</b> Click the puzzle-piece icon in your toolbar, find CASTmir, click the pin.</span></li>
+      <li><span><b>Check the server URL.</b> Click the CASTmir icon → Settings. It should already point at <span class="mono" id="origin"></span>. Set your department here too.</span></li>
+      <li><span><b>Visit a supported AI site and approve it.</b> Go to ChatGPT, Claude, Gemini, Copilot or Perplexity. CASTmir shows a consent card — approve the site. From then on, every prompt you send is scored before it leaves your browser.</span></li>
+    </ol>
+    <p class="muted" style="margin-top:14px">Your browser may warn that the extension isn't from the Web Store — expected during the pilot, safe to proceed.</p>
+  </section>
+
+  <section class="grid cols">
+    <div class="card"><div class="eyebrow">Prompt Coach</div><p class="muted" style="margin:8px 0 0">Scores clarity, context, specificity, structure and output instructions, then offers a revision you can apply with one click.</p></div>
+    <div class="card"><div class="eyebrow">Security Agent</div><p class="muted" style="margin:8px 0 0">Detects PII, credentials, confidential content and prompt injection, and observes, warns, redacts or blocks according to policy.</p></div>
+    <div class="card"><div class="eyebrow">Model Tracker</div><p class="muted" style="margin:8px 0 0">Records which platform and model each prompt went to, so quality and drift can be compared across tools.</p></div>
+  </section>
+</div>
+<script>document.getElementById('origin').textContent = location.origin;</script>
+</body></html>

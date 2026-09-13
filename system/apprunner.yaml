@@ -1,0 +1,14 @@
+version: 1.0
+runtime: nodejs18
+build:
+  commands:
+    build:
+      - npm install --omit=dev
+run:
+  runtime-version: 18
+  command: node server/server.js
+  network:
+    port: 8080
+  env:
+    - name: PORT
+      value: "8080"

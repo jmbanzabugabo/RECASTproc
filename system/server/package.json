@@ -1,0 +1,10 @@
+{
+  "name": "castmir-server",
+  "version": "1.0.0",
+  "description": "CASTmir AI Performance and Security Monitor - API, agents and dashboards",
+  "main": "server.js",
+  "scripts": { "start": "node server.js" },
+  "engines": { "node": ">=18" },
+  "optionalDependencies": { "@aws-sdk/client-s3": "^3.600.0" },
+  "license": "MIT"
+}

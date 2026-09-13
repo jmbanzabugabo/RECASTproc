@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>CASTmir settings</title>
+<style>
+  :root { --garnet:#782F40; --deep:#5C222D; --gold:#CEB888; --ink:#15181c; --muted:#6b727b; --line:#E6DEDF; --bg:#F6F3F2; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font-family: system-ui,-apple-system,"Segoe UI",sans-serif; }
+  a { color: var(--garnet); }
+  .card { background:#fff; border:1px solid var(--line); border-radius:12px; padding:16px; }
+  .mono { font-family: ui-monospace, "SF Mono", Menlo, monospace; }
+  button { font: inherit; font-weight:600; border-radius:8px; padding:9px 14px; min-height:40px; line-height:1.3; display:inline-flex; align-items:center; justify-content:center; cursor:pointer; border:1px solid #CFC5C7; background:#fff; }
+  button.primary { background: var(--garnet); border-color: var(--garnet); color:#fff; }
+  input, select { font: inherit; padding:9px 11px; border:1px solid #D8CFD1; border-radius:8px; width:100%; }
+  label { display:block; font-size:12px; color:var(--muted); margin-bottom:5px; }
+</style></head><body>
+<div style="max-width:520px;margin:32px auto;padding:0 18px;display:flex;flex-direction:column;gap:16px">
+  <h1 style="margin:0;font-size:22px">CASTmir settings</h1>
+  <div class="card" style="display:flex;flex-direction:column;gap:14px">
+    <div><label for="api">Server URL</label><input id="api" placeholder="https://your-castmir-host" /></div>
+    <div><label for="user">User ID</label><input id="user" /></div>
+    <div><label for="cat">Category</label>
+      <select id="cat"><option>Unassigned</option><option>Student</option><option>Staff</option><option>Faculty</option><option>Employee</option><option>Other</option></select></div>
+    <div><label for="college">College / division</label><input id="college" placeholder="College of Engineering" /></div>
+    <div><label for="dept">Department</label><input id="dept" placeholder="Computer Science" /></div>
+    <div style="display:flex;align-items:center;gap:9px"><input type="checkbox" id="enabled" style="width:auto" /><label for="enabled" style="margin:0">Monitoring enabled</label></div>
+    <div style="display:flex;gap:8px"><button class="primary" id="save">Save</button><span id="ok" style="align-self:center;font-size:12px;color:var(--muted)"></span></div>
+  </div>
+  <div class="card" style="font-size:13px;line-height:1.6;color:var(--muted)">
+    Rules and coaching models update automatically from the server every hour. You never need to reinstall the extension for a rule change.
+    <br /><br />Category, college and department are self-reported for now. When CASTmir is connected to the institution's management system these are filled in from the directory and these fields become read-only.
+  </div>
+</div>
+<script src="config.js"></script>
+<script src="options.js"></script></body></html>
